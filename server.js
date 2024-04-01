@@ -8,7 +8,6 @@ let app = express();
 
 
 let config = require('./config/config');
-let uploadRoute = require('./routes/fileUpload');
 let UserRoute = require('./routes/userRoute');
 
 
@@ -20,7 +19,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
-app.use('/api', uploadRoute);
 app.use('/api/user', UserRoute);
 
 
